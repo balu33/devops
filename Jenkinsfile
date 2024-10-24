@@ -7,8 +7,8 @@ pipeline {
                 script {
                     // Build the Docker image
                     sh docker build -t .
-                }
+                       }
+                   }
             }
-        }
     }
 }
