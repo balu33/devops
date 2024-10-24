@@ -1,12 +1,12 @@
 pipeline {
     agent any
-    
     stages {
         stage('Build Docker Image') {
             steps {
-                script {
-                    // Build the Docker image
-                    sh docker build -t .
+                scrpit {
+                    sh '''
+                    docker build -t balaji:1.0
+                    '''
                 }
             }
         }
