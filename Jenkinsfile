@@ -1,6 +1,14 @@
-Jenkinsfile (Scripted Pipeline)
-node {
-   stage('docker build') { 
-        sh docker build -t .
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build the Docker image
+                    sh docker build -t .
+                }
+            }
+        }
     }
 }
